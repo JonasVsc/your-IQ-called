@@ -1,6 +1,10 @@
 # your-IQ-called
 
-Welcome to **your-IQ-called**! This repository is a comprehensive collection of data structures, algorithms, coding interview questions, and Leetcode problems. Whether you are preparing for coding interviews or just looking to strengthen your understanding of fundamental computer science concepts, this repository is for you.
+🚧 **This repository is under construction!** 🚧  
+I am actively working on this project and will be updating it daily. Stay tuned for new content and improvements!
+
+⭐ If you find this repository helpful, please give it a star to show your support!
+
 
 ## Table of Contents
 
