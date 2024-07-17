@@ -11,6 +11,7 @@ I am actively working on this project and will be updating it daily. Stay tuned 
 - [Introduction](#introduction)
 - [Data Structures](#data-structures)
 - [Algorithms](#algorithms)
+- [No Link Problems](#no-link-problems)
 - [Leetcode Problems](#leetcode-problems)
 - [Coding Interview Questions](#coding-interview-questions)
 
@@ -43,9 +44,30 @@ This section covers fundamental algorithms, including:
 - Backtracking
 - And more...
 
+## No Link Problems
+These are custom problems without direct links. Solutions and tests for these problems will be provided, although it may take some time. Stay tuned for updates and new problems. Happy coding!
+
+### Arrays
+1. Finding a single missing element in an array
+2. Finding multiple missing elements in an array
+3. Finding duplicates in a sorted array
+4. Finding duplicates in an unsorted array
+5. Finding a pair of elements with sum K
+6. Finding a pair of elements with sum K in a sorted array
+7. Finding the maximum and minimum in a single scan
+
 ## Leetcode Problems
 
 A collection of problems from Leetcode, categorized by difficulty and topic. Each problem includes a solution and explanation.
+
+### Easy
+- (List of easy problems)
+
+### Medium
+- (List of medium problems)
+
+### Hard
+- (List of hard problems)
 
 ## Coding Interview Questions
 
