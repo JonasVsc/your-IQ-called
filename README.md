@@ -5,6 +5,8 @@ I am actively working on this project and will be updating it daily. Stay tuned 
 
 ⭐ If you find this repository helpful, please give it a star to show your support!
 
+*P.S.: If you are looking for passionate developers or have job opportunities, feel free to check out my profile and projects. I'm always open to discussing new possibilities.*
+
 
 ## Table of Contents
 
