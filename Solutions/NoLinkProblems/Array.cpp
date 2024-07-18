@@ -6,6 +6,10 @@
 template<int N>
 void FindingSingleMissingElementInASequence(std::array<int, N>& arr);
 
+// 01.2
+template<int N>
+void FindingSingleMissingElementInASequenceNotFromBegin(std::array<int, N>& arr);
+
 
 // 02
 template<int N>
@@ -14,7 +18,7 @@ void FindingMultipleMissingElementInASequence(std::array<int, N>& arr);
 
 int main()
 {
-	FindingSingleMissingElementInASequence(std::array<int, 7> {1, 2, 3, 4, 6, 7, 8});
+	FindingSingleMissingElementInASequenceNotFromBegin(std::array<int, 7> {12, 13, 14, 15, 17, 18, 19});
 	return 0;
 }
 
@@ -48,6 +52,22 @@ void FindingSingleMissingElementInASequence(std::array<int, N>& arr)
 	int S = (n * (n + 1)) / 2;
 	std::cout << "Sum of the sequence without missing elements is " << S << std::endl;
 	std::cout << "Missing element is " << S << " - " << sum << " = " << S - sum << std::endl;
+}
+
+// 01.2
+template<int N>
+void FindingSingleMissingElementInASequenceNotFromBegin(std::array<int, N>& arr)
+{
+	int low = arr[0];
+	for (int i = 0; i < arr.size(); i++)
+	{
+		if (arr[i] - low - i != 0)
+		{
+			int n = low + i;
+			std::cout << "Missing element is " << n << std::endl;
+			break;
+		}
+	}
 }
 
 
