@@ -4,31 +4,29 @@
 
 // 01
 template<int N>
-void FindingSingleMissingElementInASequence(std::array<int, N>& arr);
+void FindSingleMissingElementInASequence(std::array<int, N>& arr);
 
 // 01.2
 template<int N>
-void FindingSingleMissingElementInASequenceNotFromBegin(std::array<int, N>& arr);
-
+void FindSingleMissingElementInASequenceNotFromBegin(std::array<int, N>& arr);
 
 // 02
 template<int N>
-void FindingMultipleMissingElementInASequence(std::array<int, N>& arr);
+void FindMultipleMissingElementInASequence(std::array<int, N>& arr);
+
+// 03 / Hashtable/Bitset
+template<int N>
+void FindMissingElements(std::array<int, N>& arr);
+
+// 04
+template<int N>
+void FindDuplicateElements(std::array<int, N>& arr);
 
 
 int main()
 {
-	FindingSingleMissingElementInASequenceNotFromBegin(std::array<int, 7> {12, 13, 14, 15, 17, 18, 19});
 	return 0;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -38,7 +36,7 @@ int main()
 
 // 01
 template<int N>
-void FindingSingleMissingElementInASequence(std::array<int, N>& arr)
+void FindSingleMissingElementInASequence(std::array<int, N>& arr)
 {
 	int sum = 0;
 
@@ -56,7 +54,7 @@ void FindingSingleMissingElementInASequence(std::array<int, N>& arr)
 
 // 01.2
 template<int N>
-void FindingSingleMissingElementInASequenceNotFromBegin(std::array<int, N>& arr)
+void FindSingleMissingElementInASequenceNotFromBegin(std::array<int, N>& arr)
 {
 	int low = arr[0];
 	for (int i = 0; i < arr.size(); i++)
@@ -73,7 +71,50 @@ void FindingSingleMissingElementInASequenceNotFromBegin(std::array<int, N>& arr)
 
 // 02
 template<int N>
-void FindingMultipleMissingElementInASequence(std::array<int, N>& arr)
+void FindMultipleMissingElementInASequence(std::array<int, N>& arr)
 {
+	int low = arr[0];
+	for (int i = 0; i < arr.size(); i++)
+	{
+		if (arr[i] - (low + i) != 0)
+		{
+			std::cout << "Missing element: " << low + i << std::endl;
+			low++;
+		}
+	}
+}
 
+
+// 03
+template<int N>
+void FindMissingElements(std::array<int, N>& arr)
+{
+	std::array<int, 50> miss_arr{};
+	int low, high;
+	low = high = arr[0];
+
+	for (int i = 0; i < arr.size(); i++)
+	{
+		miss_arr[arr[i]] = 1;
+
+		if (low > arr[i])
+			low = arr[i];
+
+		if (high < arr[i])
+			high = arr[i];
+	}
+
+	for (int j = low; j < high; j++)
+	{
+		if (miss_arr[j] == 0)
+			std::cout << "Miss Element: " << j << std::endl;
+	}
+}
+
+
+// 04
+template<int N>
+void FindDuplicateElements(std::array<int, N>& arr)
+{
+	
 }
