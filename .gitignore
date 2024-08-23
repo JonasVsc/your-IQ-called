@@ -3,3 +3,4 @@ ADTs/.vs
 out
 CMakePresets.json
 .vs
+*.exe
