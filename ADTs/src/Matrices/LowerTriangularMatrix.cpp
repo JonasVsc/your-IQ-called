@@ -9,23 +9,29 @@ public:
 	LowerTriangularMatrix()
 		: size_{2}
 	{
-		A_ = new int[size_*(size_+1)/2] {};
+		A_ = new int[size_*(size_+1)/2] {1,1,1};
 	}
 
 	LowerTriangularMatrix(int sz)
 	{
 		size_ = sz;
-		A_ = new int[size_];
+		A_ = new int[size_*(size_+1)/2] {};
 	}
 
 	void set(int m, int n, int v)
 	{
-		if(m>=n)
-			A_[(m*(m-1)/2)+n-1] = v;
+		m++; n++;
+		if(m > size_ || n > size_)
+			throw runtime_error("index out of bounds");
+		if(m < n)
+			return;
+
+		A_[(m*(m-1)/2) + n-1] = v;
 	}
 
 	int get(int m, int n)
 	{
+		m++; n++;
 		if(m > size_ || n > size_)
 			throw runtime_error("index out of bounds");
 		if(m >= n)
@@ -64,12 +70,11 @@ private:
 
 int main()
 {
-	LowerTriangularMatrix matrix;
+	LowerTriangularMatrix matrix(5);
+	matrix.set(4,4, 3);
 	matrix.display();
-	cout << '\n';
-	matrix.set(0,0, 1);
-
-	matrix.display();
+	cout << endl;
+	cout << matrix.get(1,1);
 
 	return 0;
 }
