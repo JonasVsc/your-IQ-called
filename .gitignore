@@ -1,6 +1,2 @@
-ADTs/out
-ADTs/.vs
-out
-CMakePresets.json
-.vs
-*.exe
+build
+.cache

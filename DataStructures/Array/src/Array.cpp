@@ -1,3 +1,5 @@
+// P.S. This file will be refactored.
+
 #include<iostream>
 
 // Definition of the Array data structure
